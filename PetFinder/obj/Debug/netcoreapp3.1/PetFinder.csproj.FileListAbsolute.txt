@@ -63,3 +63,7 @@ C:\Users\aysii\OneDrive\Desktop\PetFinderAPI\PetFinder\PetFinder\obj\Debug\netco
 C:\Users\aysii\OneDrive\Desktop\PetFinderAPI\PetFinder\PetFinder\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\Users\aysii\OneDrive\Desktop\PetFinderAPI\PetFinder\PetFinder\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\aysii\OneDrive\Desktop\PetFinderAPI\PetFinder\PetFinder\obj\Debug\netcoreapp3.1\PetFinder.csprojAssemblyReference.cache
+C:\Users\aysii\OneDrive\Desktop\PetFinderAPI\PetFinder\PetFinder\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\aysii\OneDrive\Desktop\PetFinderAPI\PetFinder\PetFinder\bin\Debug\netcoreapp3.1\FluentValidation.dll
+C:\Users\aysii\OneDrive\Desktop\PetFinderAPI\PetFinder\PetFinder\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\aysii\OneDrive\Desktop\PetFinderAPI\PetFinder\PetFinder\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
