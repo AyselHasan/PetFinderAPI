@@ -8,11 +8,12 @@ using System.Threading.Tasks;
 
 namespace PetFinder.Data.Configurations
 {
-    public class PetConfiguration : IEntityTypeConfiguration<Pet>
+    public class LocationConfiguration : IEntityTypeConfiguration<Location>
     {
-        public void Configure(EntityTypeBuilder<Pet> builder)
+        public void Configure(EntityTypeBuilder<Location> builder)
         {
-            throw new NotImplementedException();
+            builder.Property(x => x.City).HasMaxLength(50);
+            builder.Property(x => x.Region).HasMaxLength(50);
         }
     }
 }

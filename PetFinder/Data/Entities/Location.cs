@@ -5,9 +5,10 @@ using System.Threading.Tasks;
 
 namespace PetFinder.Data.Entities
 {
-    public class Breed:BaseEntity
+    public class Location:BaseEntity
     {
-        public string Name { get; set; }
+        public string Region { get; set; }
+        public string City { get; set; }
         public List<Pet> Pets { get; set; }
     }
 }

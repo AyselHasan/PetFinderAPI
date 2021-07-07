@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace PetFinder.Data.Entities
 {
-    public class Breed:BaseEntity
+    public class ProfileSlider:BaseEntity
     {
-        public string Name { get; set; }
-        public List<Pet> Pets { get; set; }
+        public int Order { get; set; }
+        public string Photo { get; set; }
     }
 }

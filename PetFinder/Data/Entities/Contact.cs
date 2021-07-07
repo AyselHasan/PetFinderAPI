@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace PetFinder.Data.Entities
 {
-    public class Breed:BaseEntity
+    public class Contact:BaseEntity
     {
-        public string Name { get; set; }
-        public List<Pet> Pets { get; set; }
+        public string Mail { get; set; }
+        public string Phone { get; set; }
     }
 }

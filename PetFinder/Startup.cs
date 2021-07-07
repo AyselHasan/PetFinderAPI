@@ -1,6 +1,8 @@
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -8,6 +10,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using PetFinder.Data;
+using PetFinder.Data.Entities;
+using PetFinder.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,8 +35,15 @@ namespace PetFinder
             services.AddDbContext<AppDbContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("Default"));
-            });
+            }).AddIdentity<AppUser, IdentityRole>(options =>
+            {
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequiredLength = 8;
+            }).AddDefaultTokenProviders().AddEntityFrameworkStores<AppDbContext>();
+            services.AddControllers()
+               .AddFluentValidation();
 
+            services.AddScoped<IJwtservice, JwtService>();
             services.AddAutoMapper(typeof(Startup));
 
         }

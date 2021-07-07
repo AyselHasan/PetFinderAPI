@@ -62,8 +62,16 @@ C:\Users\aysii\OneDrive\Desktop\PetFinderAPI\PetFinder\PetFinder\obj\Debug\netco
 C:\Users\aysii\OneDrive\Desktop\PetFinderAPI\PetFinder\PetFinder\obj\Debug\netcoreapp3.1\PetFinder.genruntimeconfig.cache
 C:\Users\aysii\OneDrive\Desktop\PetFinderAPI\PetFinder\PetFinder\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\Users\aysii\OneDrive\Desktop\PetFinderAPI\PetFinder\PetFinder\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-C:\Users\aysii\OneDrive\Desktop\PetFinderAPI\PetFinder\PetFinder\obj\Debug\netcoreapp3.1\PetFinder.csprojAssemblyReference.cache
 C:\Users\aysii\OneDrive\Desktop\PetFinderAPI\PetFinder\PetFinder\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\aysii\OneDrive\Desktop\PetFinderAPI\PetFinder\PetFinder\bin\Debug\netcoreapp3.1\FluentValidation.dll
 C:\Users\aysii\OneDrive\Desktop\PetFinderAPI\PetFinder\PetFinder\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
 C:\Users\aysii\OneDrive\Desktop\PetFinderAPI\PetFinder\PetFinder\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\aysii\OneDrive\Desktop\PetFinderAPI\PetFinder\PetFinder\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\aysii\OneDrive\Desktop\PetFinderAPI\PetFinder\PetFinder\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\aysii\OneDrive\Desktop\PetFinderAPI\PetFinder\PetFinder\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\aysii\OneDrive\Desktop\PetFinderAPI\PetFinder\PetFinder\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\aysii\OneDrive\Desktop\PetFinderAPI\PetFinder\PetFinder\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\aysii\OneDrive\Desktop\PetFinderAPI\PetFinder\PetFinder\obj\Debug\netcoreapp3.1\PetFinder.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\aysii\OneDrive\Desktop\PetFinderAPI\PetFinder\PetFinder\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
+C:\Users\aysii\OneDrive\Desktop\PetFinderAPI\PetFinder\PetFinder\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\aysii\OneDrive\Desktop\PetFinderAPI\PetFinder\PetFinder\obj\Debug\netcoreapp3.1\PetFinder.csprojAssemblyReference.cache
