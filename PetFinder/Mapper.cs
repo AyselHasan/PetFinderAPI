@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using PetFinder.API.Manage.DTOs;
 using PetFinder.Data.Entities;
 using PetFinder.DTOs;
 using System;
@@ -13,6 +14,7 @@ namespace PetFinder
         public Mapper()
         {
             CreateMap<BreedCreateDTO, Breed>();
+            CreateMap<LocationCreateDTO, Location>();
         }
     }
 }
