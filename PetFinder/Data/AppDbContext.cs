@@ -18,13 +18,14 @@ namespace PetFinder.Data
 
         public DbSet<Breed> Breeds { get; set; }
         public DbSet<Location> Locations {get;set;}
+        public DbSet<Color> Colors { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new AppUserConfiguration());
             modelBuilder.ApplyConfiguration(new BreedConfiguration());
-           // modelBuilder.ApplyConfiguration(new PetConfiguration());
             modelBuilder.ApplyConfiguration(new LocationConfiguration());
+            modelBuilder.ApplyConfiguration(new ColorConfiguration());
 
 
             base.OnModelCreating(modelBuilder);

@@ -15,6 +15,7 @@ namespace PetFinder.Data.Entities
         public string About { get; set; }
         public Gender Gender { get; set; }
         public Age Age { get; set; }
+        public Color Color { get; set; }
         public Breed Breed { get; set; }
         public Location Location { get; set; }
     }
