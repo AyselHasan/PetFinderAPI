@@ -18,7 +18,9 @@ namespace PetFinder
             CreateMap<LocationCreateDTO, Location>();
             CreateMap<ColorCreateDTO, Color>();
             CreateMap<ContactCreateDTO, Contact>();
-
+            CreateMap<CategoryCreateDTO, Category>();
+            CreateMap<Category, CategoryGetDTO>();
+            CreateMap<Category, CategoryItemDTO>();
         }
     }
 }

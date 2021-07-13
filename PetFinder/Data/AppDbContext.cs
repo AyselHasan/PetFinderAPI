@@ -20,6 +20,7 @@ namespace PetFinder.Data
         public DbSet<Location> Locations { get; set; }
         public DbSet<Color> Colors { get; set; }
         public DbSet<Contact> Contact {get;set;}
+        public DbSet<Category> Categories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -28,6 +29,7 @@ namespace PetFinder.Data
             modelBuilder.ApplyConfiguration(new LocationConfiguration());
             modelBuilder.ApplyConfiguration(new ColorConfiguration());
             modelBuilder.ApplyConfiguration(new ContactConfiguration());
+            modelBuilder.ApplyConfiguration(new CategoryConfiguration());
 
 
             base.OnModelCreating(modelBuilder);

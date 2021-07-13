@@ -30,7 +30,7 @@ namespace PetFinder.Controllers
         [Route("{id}")]
         public async Task<IActionResult> Get(int id)
         {
-            Breed breed = await context.Breeds.FirstOrDefaultAsync(x => x.Id == id);
+            Breed breed = await context.Breeds.FirstOrDefaultAsync(x => x.Id == id && x.IsDeleted==false);
 
             if (breed == null)
             {
