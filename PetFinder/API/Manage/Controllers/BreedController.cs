@@ -66,8 +66,8 @@ namespace PetFinder.Controllers
             #endregion
 
             newBreed = mapper.Map<Breed>(breedCreatedto);
-            newBreed.CreatedAt = DateTime.UtcNow;
-            newBreed.ModifiedAt = DateTime.UtcNow;
+            newBreed.CreatedAt = DateTime.UtcNow.AddHours(4);
+            newBreed.ModifiedAt = DateTime.UtcNow.AddHours(4);
 
             await context.AddAsync(newBreed);
             await context.SaveChangesAsync();
@@ -97,7 +97,7 @@ namespace PetFinder.Controllers
 
             Breed breed = await context.Breeds.FirstOrDefaultAsync(x => x.Id == id && x.IsDeleted == false);
             breed.Name = breedEditDto.Name;
-            breed.ModifiedAt = DateTime.UtcNow;
+            breed.ModifiedAt = DateTime.UtcNow.AddHours(4);
 
             await context.SaveChangesAsync();
 

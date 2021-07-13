@@ -17,8 +17,9 @@ namespace PetFinder.Data
         }
 
         public DbSet<Breed> Breeds { get; set; }
-        public DbSet<Location> Locations {get;set;}
+        public DbSet<Location> Locations { get; set; }
         public DbSet<Color> Colors { get; set; }
+        public DbSet<Contact> Contact {get;set;}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -26,6 +27,7 @@ namespace PetFinder.Data
             modelBuilder.ApplyConfiguration(new BreedConfiguration());
             modelBuilder.ApplyConfiguration(new LocationConfiguration());
             modelBuilder.ApplyConfiguration(new ColorConfiguration());
+            modelBuilder.ApplyConfiguration(new ContactConfiguration());
 
 
             base.OnModelCreating(modelBuilder);

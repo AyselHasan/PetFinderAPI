@@ -68,8 +68,8 @@ namespace PetFinder.API.Manage.Controllers
             }
             #endregion
             newLocation = mapper.Map<Location>(locationCreateDTO);
-            newLocation.CreatedAt = DateTime.UtcNow;
-            newLocation.ModifiedAt = DateTime.UtcNow;
+            newLocation.CreatedAt = DateTime.UtcNow.AddHours(4);
+            newLocation.ModifiedAt = DateTime.UtcNow.AddHours(4);
 
             await context.AddAsync(newLocation);
             await context.SaveChangesAsync();
@@ -100,7 +100,7 @@ namespace PetFinder.API.Manage.Controllers
             Location location = await context.Locations.FirstOrDefaultAsync(x => x.Id == id && x.IsDeleted == false);
             location.City = locationEditDto.City;
             location.Region = locationEditDto.Region;
-            location.ModifiedAt = DateTime.UtcNow;
+            location.ModifiedAt = DateTime.UtcNow.AddHours(4);
 
             await context.SaveChangesAsync();
 

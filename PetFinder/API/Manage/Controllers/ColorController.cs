@@ -68,8 +68,8 @@ namespace PetFinder.API.Manage.Controllers
             #endregion
 
             newColor = mapper.Map<Color>(colorCreateDTO);
-            newColor.CreatedAt = DateTime.UtcNow;
-            newColor.ModifiedAt = DateTime.UtcNow;
+            newColor.CreatedAt = DateTime.UtcNow.AddHours(4);
+            newColor.ModifiedAt = DateTime.UtcNow.AddHours(4);
 
             await context.AddAsync(newColor);
             await context.SaveChangesAsync();
@@ -99,7 +99,7 @@ namespace PetFinder.API.Manage.Controllers
 
             Color color = await context.Colors.FirstOrDefaultAsync(x => x.Id == id && x.IsDeleted == false);
             color.Name = colorEditDTO.Name;
-            color.ModifiedAt = DateTime.UtcNow;
+            color.ModifiedAt = DateTime.UtcNow.AddHours(4);
 
             await context.SaveChangesAsync();
 
