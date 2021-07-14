@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PetFinder.Data;
 
 namespace PetFinder.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210713110819_SubcategoryTableAdded")]
+    partial class SubcategoryTableAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -175,12 +177,12 @@ namespace PetFinder.Data.Migrations
                     b.Property<DateTime>("IsCreated")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 7, 13, 15, 39, 29, 592, DateTimeKind.Utc).AddTicks(5693));
+                        .HasDefaultValue(new DateTime(2021, 7, 13, 15, 8, 18, 618, DateTimeKind.Utc).AddTicks(1012));
 
                     b.Property<DateTime>("IsModified")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 7, 13, 15, 39, 29, 595, DateTimeKind.Utc).AddTicks(6272));
+                        .HasDefaultValue(new DateTime(2021, 7, 13, 15, 8, 18, 622, DateTimeKind.Utc).AddTicks(9464));
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
@@ -448,9 +450,6 @@ namespace PetFinder.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CategoryID")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
@@ -466,8 +465,6 @@ namespace PetFinder.Data.Migrations
                         .HasColumnType("nvarchar(60)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("CategoryID");
 
                     b.ToTable("Subcategories");
                 });
@@ -548,17 +545,6 @@ namespace PetFinder.Data.Migrations
                     b.Navigation("Location");
                 });
 
-            modelBuilder.Entity("PetFinder.Data.Entities.Subcategory", b =>
-                {
-                    b.HasOne("PetFinder.Data.Entities.Category", "Category")
-                        .WithMany("SubCategories")
-                        .HasForeignKey("CategoryID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Category");
-                });
-
             modelBuilder.Entity("PetFinder.Data.Entities.Breed", b =>
                 {
                     b.Navigation("Pets");
@@ -567,8 +553,6 @@ namespace PetFinder.Data.Migrations
             modelBuilder.Entity("PetFinder.Data.Entities.Category", b =>
                 {
                     b.Navigation("Pets");
-
-                    b.Navigation("SubCategories");
                 });
 
             modelBuilder.Entity("PetFinder.Data.Entities.Color", b =>

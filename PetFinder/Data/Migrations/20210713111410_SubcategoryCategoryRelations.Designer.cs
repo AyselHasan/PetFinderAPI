@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PetFinder.Data;
 
 namespace PetFinder.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210713111410_SubcategoryCategoryRelations")]
+    partial class SubcategoryCategoryRelations
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -175,12 +177,12 @@ namespace PetFinder.Data.Migrations
                     b.Property<DateTime>("IsCreated")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 7, 13, 15, 39, 29, 592, DateTimeKind.Utc).AddTicks(5693));
+                        .HasDefaultValue(new DateTime(2021, 7, 13, 15, 14, 10, 466, DateTimeKind.Utc).AddTicks(3264));
 
                     b.Property<DateTime>("IsModified")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 7, 13, 15, 39, 29, 595, DateTimeKind.Utc).AddTicks(6272));
+                        .HasDefaultValue(new DateTime(2021, 7, 13, 15, 14, 10, 470, DateTimeKind.Utc).AddTicks(1662));
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
@@ -448,7 +450,7 @@ namespace PetFinder.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CategoryID")
+                    b.Property<int?>("CategoryId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
@@ -467,7 +469,7 @@ namespace PetFinder.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CategoryID");
+                    b.HasIndex("CategoryId");
 
                     b.ToTable("Subcategories");
                 });
@@ -552,9 +554,7 @@ namespace PetFinder.Data.Migrations
                 {
                     b.HasOne("PetFinder.Data.Entities.Category", "Category")
                         .WithMany("SubCategories")
-                        .HasForeignKey("CategoryID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CategoryId");
 
                     b.Navigation("Category");
                 });

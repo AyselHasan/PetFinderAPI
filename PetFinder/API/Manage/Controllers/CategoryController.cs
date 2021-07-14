@@ -136,5 +136,23 @@ namespace PetFinder.API.Manage.Controllers
         }
         #endregion
 
+        #region Recently Added
+        [HttpGet]
+        [Route("recently")]
+        public async Task<IActionResult> recentlyAdded()
+        {
+            List<Category> category = await context.Categories.OrderByDescending(d => d.CreatedAt).ToListAsync();
+
+
+            CategoryListDTO categoriesDto = new CategoryListDTO
+            {
+                Categories = mapper.Map<List<CategoryItemDTO>>(category),
+                TotalCount = await context.Categories.Where(x => !x.IsDeleted).CountAsync()
+            };
+
+
+            return Ok(categoriesDto);
+        }
+        #endregion
     }
 }

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using PetFinder.API.Client.DTOs;
 using PetFinder.API.Manage.DTOs;
+using PetFinder.API.Manage.DTOs.SubcategoryDTO;
 using PetFinder.Data.Entities;
 using PetFinder.DTOs;
 using System;
@@ -21,6 +22,9 @@ namespace PetFinder
             CreateMap<CategoryCreateDTO, Category>();
             CreateMap<Category, CategoryGetDTO>();
             CreateMap<Category, CategoryItemDTO>();
+            CreateMap<SubcategoryCreateDTO, Subcategory>();
+            CreateMap<Subcategory, SubcategoryGetDTO>();
+            CreateMap<Subcategory, SubcategoryItemDTO>();
         }
     }
 }

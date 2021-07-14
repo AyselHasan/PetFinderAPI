@@ -5,8 +5,10 @@ using System.Threading.Tasks;
 
 namespace PetFinder.Data.Entities
 {
-    public class Subcategory
+    public class Subcategory:BaseEntity
     {
         public string Name { get; set; }
+        public Category Category { get; set; }
+        public int CategoryID { get; set; }
     }
 }

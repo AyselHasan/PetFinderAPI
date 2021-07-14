@@ -9,5 +9,6 @@ namespace PetFinder.Data.Entities
     {
         public string Name { get; set; }
         public List<Pet> Pets { get; set; }
+        public List<Subcategory> SubCategories { get; set; }
     }
 }
